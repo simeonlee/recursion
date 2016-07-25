@@ -30,9 +30,7 @@ var checkChildrenForClass = function(parent, class_name){
 			}
 			if (child.hasChildNodes()) {
 				var add = checkChildrenForClass(child, class_name);
-				add.forEach(function(tba){
-					res.push(tba);
-				})
+				res = res.concat(add);
 			}
 		})
 	}
